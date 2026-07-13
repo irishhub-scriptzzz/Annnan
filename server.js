@@ -6,8 +6,8 @@ const crypto = require('crypto');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ─── YOUR DOMAIN ───
-const PUBLIC_URL = process.env.PUBLIC_URL || process.env.RENDER_EXTERNAL_URL || 'https://ligma-balls.up.railway.app';
+// ─── YOUR DOMAIN (UPDATED) ───
+const PUBLIC_URL = process.env.PUBLIC_URL || process.env.RENDER_EXTERNAL_URL || 'https://annnan.vercel.app';
 
 app.use(cors({ origin: PUBLIC_URL, credentials: true }));
 app.use(express.json({ limit: '10mb' }));
@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // ─── SESSION STORE ───
 const sessions = new Map();
-const CORRECT_PASSWORD = 'imgayandimgabe';   // <-- UPDATED
+const CORRECT_PASSWORD = 'imgayandimgabe';
 const SESSION_TTL = 24 * 60 * 60 * 1000; // 24h
 const COOKIE_NAME = 'xeno_sid';
 
